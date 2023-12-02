@@ -1,16 +1,16 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Home from "./pages/Home";
-import Products from "./pages/Products";
+import React from 'react';
+import './App.css';
+import Home from './pages/Home';
+import Products from './components/Products';
+import { Router } from 'react-router-dom';
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
       <Home />
       <Products />
     </>
   );
-}
+};
 
 export default App;

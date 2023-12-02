@@ -1,25 +1,24 @@
-import React from "react";
-interface ProductInFo {
+import React from 'react';
+
+interface ProductProps {
   name: string;
   count: number;
   img: string;
   id: number;
 }
-const productsList: ProductInFo[] = [
-  { name: "blackRacket", count: 1, img: "./img/blackRacket", id: 1 },
-  { name: "blueckRacket", count: 1, img: "./img/blueRacket", id: 2 },
-  { name: "redRacket", count: 1, img: "./img/redRacket", id: 3 },
-];
-export default function Product(product: ProductInFo) {
+
+const Product: React.FC<{ product: ProductProps }> = ({ product }) => {
+  // public 폴더 내부의 이미지에 접근
+  const imagePath = `/img/${product.img}`;
+  console.log(imagePath);
+
   return (
-    <>
-      {productsList.map((product) => {
-        <div>
-          <img src={product.img} alt="" />
-          <p>{product.name}</p>
-          <input type="button" value="order" />
-        </div>;
-      })}
-    </>
+    <div className='mt-5'>
+      <img className='w-48' src={imagePath} alt={product.name} />
+      <p className='my-8'>{product.name}</p>
+      <button>order</button>
+    </div>
   );
-}
+};
+
+export default Product;

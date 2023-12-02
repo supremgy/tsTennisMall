@@ -1,0 +1,5 @@
+[
+  { "name": "Black Racket", "count": 1, "img": "blackRacket.png", "id": 1 },
+  { "name": "Blue Racket", "count": 1, "img": "blueRacket.png", "id": 2 },
+  { "name": "Red Racket", "count": 1, "img": "redRacket.png", "id": 3 }
+]
